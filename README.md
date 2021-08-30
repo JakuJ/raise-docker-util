@@ -9,7 +9,7 @@ raise-docker-util
 # Usage
 
 ```bash
-raise.sh check <file> # runs rsltc on file
-raise.sh compile <file> # runs "rsltc -m" on file
-raise.sh sml <file> # runs sml on file
+raise.sh rsltc <file.rsl>
+raise.sh rsltc -m <file.rsl>
+raise.sh sml <file.sml>
 ```
