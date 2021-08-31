@@ -6,4 +6,4 @@ DIR=$(dirname "$ARG")
 REALDIR=$(realpath "$DIR")
 NAME=$(basename "$ARG")
 
-docker run -v "$REALDIR:/usr/src" formal-aspects-docker_rsl $CMDS "./$NAME"
+docker run --rm -v "$REALDIR:/usr/src" formal-aspects-docker_rsl $CMDS "./$NAME"
