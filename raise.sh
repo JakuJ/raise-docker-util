@@ -5,5 +5,6 @@ ARG=${@: -1}
 DIR=$(dirname "$ARG")
 REALDIR=$(realpath "$DIR")
 NAME=$(basename "$ARG")
+IMAGE="ghcr.io/jakuj/raise-tools:main"
 
-docker run --rm -v "$REALDIR:/usr/src" ghcr.io/jakuj/raise-tools:main $CMDS "./$NAME"
+docker run --rm --platform linux/amd64 -v "$REALDIR:/usr/src" "$IMAGE" $CMDS "./$NAME"
